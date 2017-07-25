@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Sssports\Affiliatemembers\Api\AffiliatemembersManagementInterface" type="Sssports\Affiliatemembers\Model\AffiliatemembersManagement"/>
+	<virtualType name="Sssports\Affiliatemembers\Model\ResourceModel\AffiliateMembers\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">sssports_affiliate_members</argument>
+			<argument name="resourceModel" xsi:type="string">Sssports\Affiliatemembers\Model\ResourceModel\AffiliateMembers\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="sssports_affiliate_members_grid_data_source" xsi:type="string">Sssports\Affiliatemembers\Model\ResourceModel\AffiliateMembers\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+	<type name="Sssports\Affiliatemembers\Controller\Adminhtml\Affiliatemembers\Image\Upload">
+		<arguments>
+			<argument name="imageUploader" xsi:type="object">Magento\Catalog\CategoryImageUpload</argument>
+		</arguments>
+	</type>
+</config>

@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Sssports::parent" module="Sssports_Affiliatemembers" resource="Magento_Backend::content" sortOrder="9999" title="Sssports" parent="Magento_Backend::marketing"/>
+		<add action="sssports_affiliatemembers/affiliatemembers/index" id="Sssports::sssports_affiliate_members" module="Sssports_Affiliatemembers" parent="Sssports::parent" resource="Magento_Backend::content" sortOrder="9999" title="affiliate members"/>
+	</menu>
+</config>

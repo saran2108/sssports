@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+	<router id="admin">
+		<route frontName="sssports_affiliatemembers" id="sssports_affiliatemembers">
+			<module before="Magento_Backend" name="Sssports_Affiliatemembers"/>
+		</route>
+	</router>
+</config>

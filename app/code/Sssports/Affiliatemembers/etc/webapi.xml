@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route method="GET" url="/V1/sssports-affiliatemembers/affiliatemembers">
+		<service class="Sssports\Affiliatemembers\Api\AffiliatemembersManagementInterface" method="getAffiliatemembers"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+	<route method="POST" url="/V1/sssports-affiliatemembers/affiliate_members">
+		<service class="Sssports\Affiliatemembers\Api\AffiliateMembersRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Sssports_Affiliatemembers::affiliate_members_save"/>
+		</resources>
+	</route>
+	<route method="GET" url="/V1/sssports-affiliatemembers/search">
+		<service class="Sssports\Affiliatemembers\Api\AffiliateMembersRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Sssports_Affiliatemembers::affiliate_members_view"/>
+		</resources>
+	</route>
+	<route method="GET" url="/V1/sssports-affiliatemembers/:affiliateMembersId">
+		<service class="Sssports\Affiliatemembers\Api\AffiliateMembersRepositoryInterface" method="getById"/>
+		<resources>
+			<resource ref="Sssports_Affiliatemembers::affiliate_members_view"/>
+		</resources>
+	</route>
+	<route method="PUT" url="/V1/sssports-affiliatemembers/:affiliateMembersId">
+		<service class="Sssports\Affiliatemembers\Api\AffiliateMembersRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Sssports_Affiliatemembers::affiliate_members_update"/>
+		</resources>
+	</route>
+	<route method="DELETE" url="/V1/sssports-affiliatemembers/:affiliateMembersId">
+		<service class="Sssports\Affiliatemembers\Api\AffiliateMembersRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Sssports_Affiliatemembers::affiliate_members_delete"/>
+		</resources>
+	</route>
+</routes>
