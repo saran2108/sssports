@@ -2,7 +2,7 @@
 
 This module is a Affiliate members implementation for Magento2 allowing you to create affiliates members.
 
-# install extension using COMMAND LINE
+# Install extension using COMMAND LINE
 
 Step 1: Download the extension
 
