@@ -13,5 +13,14 @@ interface AffiliatemembersManagementInterface
      * @return string
      */
     
-    public function getAffiliatemembers($param);
+    public function getAffiliatemembers();
+    
+    /**
+     * Retrieve affiliate_members matching the specified criteria.
+     * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
+     * @return \Sssports\Affiliatemembers\Api\Data\AffiliateMembersSearchResultsInterface
+     * @throws \Magento\Framework\Exception\LocalizedException
+     */
+    
+    public function getList();
 }
